@@ -14,7 +14,7 @@ public abstract class Room {
         if (hotel == null) {
             throw new IllegalArgumentException("The room must belong to a valid hotel");
         }
-        this.hotel = hotel; // Se asigna primero porque setFloor lo necesita para validar
+        this.hotel = hotel; 
         
         setNumber(number);
         setFloor(floor);
@@ -22,7 +22,7 @@ public abstract class Room {
         setDoubleBedCount(doubleBedCount);
         setDirectSeaView(directSeaView);
         setHasPremiumChannels(hasPremiumChannels);
-        this.enabled = true; // Toda habitación nace habilitada por defecto
+        this.enabled = true; 
     }
 
     public int getNumber() {
@@ -41,7 +41,7 @@ public abstract class Room {
     }
 
     public void setFloor(int floor) {
-        // Validar que el piso esté entre 1 y el total de pisos del hotel
+        
         if (floor < 1 || floor > hotel.getFloors()) {
             throw new IllegalArgumentException("Invalid floor. The hotel only has " + hotel.getFloors() + " floors.");
         }

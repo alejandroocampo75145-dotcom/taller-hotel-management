@@ -77,7 +77,7 @@ public class Reservation {
     }
 
     public void setStatus(int status) {
-        // Validación de máquina de estados
+        
         if (status < -1 || status > 1) {
             throw new IllegalArgumentException("Invalid status");
         }
